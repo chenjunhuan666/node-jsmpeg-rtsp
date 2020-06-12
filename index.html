@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body{
+            text-align: center;
+        }
+        #canvas{
+            width: 1000px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <script type="text/javascript" src="jsmpeg.min.js"></script>
+    <script type="text/javascript">
+        player = new JSMpeg.Player('ws://localhost:9999', {
+            canvas: document.getElementById('canvas') // Canvas should be a canvas DOM element
+        })	
+    </script>
+</body>
+</html>
